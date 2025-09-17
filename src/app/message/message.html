@@ -1,0 +1,36 @@
+<div class="child-container" [style.background]="childColor">
+    <h3>👧 Child Component</h3>
+  
+    <!-- Task 1: Message to parent -->
+    <p><strong>Message from Child:</strong></p>
+    <button (click)="sendMessageToParent()">Send Message to Parent</button>
+  
+    <!-- Task 2: Change parent color -->
+    <button (click)="changeParentColorFromChild()">Change Parent Background</button>
+  
+    <!-- Task 3: Two-way binding -->
+    <p>
+      Shared Value (Two-way Binding): 
+      <input [ngModel]="sharedText" (ngModelChange)="updateSharedText($event)" />
+    </p>
+  
+    <!-- Task 4: Toggle child background color -->
+    <button (click)="toggleChildColor()">Toggle Child Background</button>
+  
+    <!-- Task 5: Display task list -->
+    <div *ngIf="taskList.length">
+      <p>Tasks from Parent:</p>
+      <ul>
+        <li *ngFor="let task of taskList">{{ task }}</li>
+      </ul>
+    </div>
+  
+    <!-- Task 6: Status display -->
+    <p>Status from Parent: <strong>{{ status }}</strong></p>
+  
+    <!-- Task 7: Property binding demo -->
+    <p [style.color]="status === 'error' ? 'red' : status === 'warning' ? 'orange' : 'green'">
+      This text color changes based on status!
+    </p>
+  </div>
+  

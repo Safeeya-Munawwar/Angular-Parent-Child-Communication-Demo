@@ -1,0 +1,56 @@
+<div class="parent-container" [style.background]="parentColor">
+    <h2>👩‍👧 Parent Component</h2>
+  
+    <!-- Task 1: Message from parent to child -->
+    <p><strong>Parent Message:</strong> {{ parentMessage }}</p>
+    <button (click)="parentMessage = 'Message sent from Parent!'">
+      Send Message to Child
+    </button>
+  
+    <!-- Task 2: Display child reply -->
+    <p><strong>Child Reply:</strong> {{ childReply }}</p>
+  
+    <!-- Task 3: Change parent background -->
+    <button (click)="changeParentColor()">Change Parent Color</button>
+  
+    <!-- Task 4: Reset all -->
+    <button (click)="resetAll()">Reset</button>
+    <p>{{ resetMessage }}</p>
+  
+    <!-- Task 5: Two-way binding shared value -->
+    <p>
+      Shared Value: <input [(ngModel)]="sharedValue" />
+    </p>
+  
+    <!-- Task 6: Toggle child section -->
+    <button (click)="showChildExtra = !showChildExtra">
+      Toggle Child Section
+    </button>
+  
+    <!-- Task 7: Add new task -->
+    <button (click)="addTask()">Add New Task</button>
+  
+    <!-- Child Component -->
+    <app-message
+      *ngIf="showChildExtra"
+      [parentMessage]="parentMessage"
+      (messageEvent)="receiveChildMessage($event)"
+      [(sharedText)]="sharedValue"
+      [taskList]="taskList"
+      [status]="status"
+      (colorChange)="changeParentColor()"
+    >
+    </app-message>
+  
+    <hr />
+  
+    <!-- Task 8: Status selection -->
+    <label>Status:
+      <select [(ngModel)]="status">
+        <option value="success">Success</option>
+        <option value="warning">Warning</option>
+        <option value="error">Error</option>
+      </select>
+    </label>
+  </div>
+  
