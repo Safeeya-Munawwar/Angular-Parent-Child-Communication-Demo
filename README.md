@@ -1,59 +1,52 @@
-# ParentChildApp
+# 🧩 Angular Parent-Child Communication Demo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
+![Angular](https://img.shields.io/badge/Angular-18-red)
 
-## Development server
+---
 
-To start a local development server, run:
+A simple **Angular learning project** demonstrating how to share data between **Parent and Child components** using:
+- @Input() – Passing data from parent to child
+- @Output() + EventEmitter – Sending data/events from child to parent
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🚀 Features
+- ✅ Parent sends data (e.g., a message or number) to child component using @Input
+- ✅ Child sends data back to parent using @Output + EventEmitter
+- ✅ Real-time updates between parent and child UI
+- ✅ Easy-to-understand Angular code for beginners
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ Tech Stack
+- **Frontend:** Angular 17
+- **Language:** TypeScript, HTML, SCSS
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📸 Screenshot
+![ParentChild](parent-child.PNG)
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 🚀 Author
+ **Safeeya Munawwar**
+ <p>
+  <a href="https://www.linkedin.com/in/safeeya-munawwar" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://github.com/Safeeya-Munawwar" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+  <a href="mailto:shafiyasha0036@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  </a>
+  <a href="https://safeeya-munawwar-personal-portfolio.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-0A66C2?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
+  </a>
+</p>
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+© 2025 Angular Parent-Child Communication Demo | Built with ❤️ for learning
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
